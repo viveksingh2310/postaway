@@ -43,7 +43,7 @@ export default class PostModel{
         new PostModel(1,2,"Hello welvcome to hawai","https://cdn1.matadornetwork.com/blogs/1/2018/08/double-rainbow-on-Kauai.jpg"),
         new PostModel(2,1,"Hello welvcome to india","https://www.hdwallpapers.in/download/taj_mahal_agra_india_4k-HD.jpg"),
         new PostModel(3,1,"laptop and the never ending work is always my best place in this world to explore more into the universe","https://get.pxhere.com/photo/laptop-computer-work-people-technology-web-internet-young-corporate-office-communication-professional-business-monitor-project-startup-design-students-display-strategy-plan-planning-learning-presentation-company-marketing-710514.jpg"),
-        new PostModel(1,2,"the siblings bonds are the best among all onds in this world","https://i.pinimg.com/564x/53/73/d9/5373d962807c73a4526219c2ced76329.jpg"),
+        new PostModel(4,2,"the siblings bonds are the best among all onds in this world","https://i.pinimg.com/564x/53/73/d9/5373d962807c73a4526219c2ced76329.jpg"),
     ]
     
 }
