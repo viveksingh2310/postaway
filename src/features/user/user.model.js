@@ -13,7 +13,7 @@ export default class UserModel{
         return user;
     }
     static signup(name,email,pass){
-         const newUser=new UserModel(db.length+1,name,email,pass);
+         const newUser=new UserModel(this.db.length+1,name,email,pass);
         if(UserModel.db.push(newUser)){
             return newUser;
         }

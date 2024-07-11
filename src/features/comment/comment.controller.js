@@ -15,16 +15,16 @@ export default class CommentController{
     }
     static deleteComment(req,res){
         const{id}=req.body;//commentid
-        const res= CommentModel.deleteComment(id);
-        if(!res)
+        const p= CommentModel.deleteComment(id);
+        if(!p)
             return res.status(400).send('comment not found')
-        return res.status(200).send(res);
+        return res.status(200).send(p);
     }
     static addComment(req,res){
         const {userId,postId,content}=req.body;
-        const res=CommentModel.addComment(userId,postId,content);
-        if(!res)
+        const p=CommentModel.addComment(userId,postId,content);
+        if(!p)
             return res.status(400).send('bad request to add comment')
-        return res.status(200).send(res);
+        return res.status(200).send(p);
     }
 }

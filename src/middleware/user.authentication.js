@@ -1,6 +1,6 @@
 import jwt from 'jsonwebtoken'
 export default function UserAuth(req,res,next){
-    const token=req.header['authorization']
+    const token=req.headers['authorization']
     if(!token)
         return res.status(400).send('user not registered');
     try{

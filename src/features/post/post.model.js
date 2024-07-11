@@ -12,10 +12,12 @@ export default class PostModel{
     }
    static getUserPost(userId){//here the credentials of user are used (get:userId)
         let userPost=[];
-        PostModel.posts.forEach((u)=>{
+        this.posts.forEach((u)=>{
             if(u.userId==userId)
                 userPost.push(u);
-        })
+           
+        });
+        
         return userPost
     }
     static getById(id){//get:id
