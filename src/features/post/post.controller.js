@@ -16,7 +16,8 @@ export default class PostController{
     }
     static createPost(req,res){
         const {userId,caption}=req.body;
-        const imageURL='/images/'+req.file.imageURL;//here the url with respect to the server storage is changed
+        console.log('hello ro ');
+        const imageURL='images/'+req.file.filename;//here the url with respect to the server storage is changed
         const newPost=PostModel.createPost(userId,caption,imageURL)
         if(!newPost)
             return res.status(400).send('a bad request')
@@ -25,7 +26,7 @@ export default class PostController{
     }
     static updatePost(req,res){//only id of the existinf post is sifficient for updation process to undergo
         const {id,caption}=req.body;
-        const imageURL='../../images/'+req.file.filename;
+        const imageURL='images/'+req.file.filename;
       return res.status(200).send(PostModel.updatePost(id,caption,imageURL))
     }
     static delete(req,res){

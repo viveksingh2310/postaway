@@ -5,10 +5,11 @@ import UserAuth from './src/middleware/user.authentication.js';
 import PostRouter from './src/features/post/post.routes.js';
 import LikeRouter from './src/features/like/like.routes.js';
 import CommentRouter from './src/features/comment/comment.routes.js';
-import multer from 'multer';
+// import multer from 'multer';
 export const app=express();
 app.use(bodyParser.json());
-app.use(multer);
+app.use(express.json())
+// app.use(multer);
 app.use(bodyParser.urlencoded({extended:true}));
 app.get('/',(req,res)=>{
     return res.send('hello you are in the index of Postaway');
