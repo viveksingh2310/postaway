@@ -19,14 +19,17 @@ export class CommentModel{
         return newComment;
     }
     static deleteComment(id){
-       return this.comments.splice(this.comments.findIndex(this.comments.find(c=>c.id==id)),1)
+        const ele=this.comments.find(c=>c.id==id);
+        // console.log(ele);
+        const indx=this.comments.findIndex((u)=>u==ele)
+       return this.comments.splice(indx,1)
     }
     static updateComment(id,content){
         const e=this.comments.find((c)=>c.id==id)
         if(!e){
             return;}
        else{
-        const i=this.comments.findIndex(e)
+        const i=this.comments.findIndex((p)=>p==e)
         this.comments[i].content=content
         return this.comments[i]
                     }

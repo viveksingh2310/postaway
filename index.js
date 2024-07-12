@@ -17,5 +17,5 @@ app.get('/',(req,res)=>{
 app.use('/api',UserRoute);//user signup and signin is used here
 app.use('/api/posts',UserAuth,PostRouter)
 app.use('/api/likes',UserAuth,LikeRouter)
-app.use('api/comments',UserAuth,CommentRouter)
+app.use('/api/comments',UserAuth,CommentRouter)
 

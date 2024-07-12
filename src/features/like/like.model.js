@@ -15,13 +15,30 @@ export default class LikeModel{
         return postLikes;
     }
     static updateLikes(postId,email){
+    //     this.likes.forEach((u)=>{
+    //         console.log(u.email);
+
+    //     })
+    //     this.likes.forEach((u)=>{
+    //         console.log(u.postId);
+            
+    //     })
+    //    const i= LikeModel.likes.find((u)=>u.email==email && u.postId==postId);
+    //    console.log(i);
+    //    const indx=this.likes.findIndex(i);
+    //    console.log(indx);
+    //    console.log(indx);
+    //    this.likes[indx].email=email;
+    //    this.likes[indx].postId=postId;
         this.likes.forEach((l)=>{
-            if(l.postId==postId && l.email==email){
-                const status=l.isLiked;
-                l.isLiked=!status;
+            // console.log('hola')
+            if(l.postId==postId && l.userId==email){
+                // const status=l.isLiked;
+                console.log('ster')
+                l.isLiked=!l.isLiked;
             }
         })
-       return this.likes.forEach((l)=>l.postId==postId && l.email==email)
+       return this.likes.filter((u)=>u.postId==postId && u.userId==email)
     }
     static likes=[
         new LikeModel(1,1,'viveksingh14538@gmail.com'),
